@@ -1,7 +1,8 @@
 // import React, { useState } from "react";
 import React from "react";
+import logo from "../../logo.svg";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, reset } from "../../redux/counter";
+import { increment, decrement, reset } from "../../Redux/Features/CounterSlice";
 
 const CounterDisplay = () => {
   //   const [count, setCount] = useState(0);
@@ -15,6 +16,7 @@ const CounterDisplay = () => {
   const dispatch = useDispatch();
   return (
     <div className="d-flex align-items-center">
+      <img src={logo} className="App-logo" alt="logo" />
       <div className="circle">
         <span>{count}</span>
       </div>
